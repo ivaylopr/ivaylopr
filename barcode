@@ -1,0 +1,39 @@
+using System;
+
+namespace BarcodeValidator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string firstBorder = Console.ReadLine();
+            string secondBorder = Console.ReadLine();
+            int indx1 = int.Parse(firstBorder[0].ToString());
+            int indx2 = int.Parse(firstBorder[1].ToString());
+            int indx3 = int.Parse(firstBorder[2].ToString());
+            int indx4 = int.Parse(firstBorder[3].ToString());
+            int indx5 = int.Parse(secondBorder[0].ToString());
+            int indx6 = int.Parse(secondBorder[1].ToString());
+            int indx7 = int.Parse(secondBorder[2].ToString());
+            int indx8 = int.Parse(secondBorder[3].ToString());
+            
+                for (int i = indx1; i <= indx5; i++)
+                {
+                    for (int i1 = indx2; i1 <= indx6; i1++)
+                    {
+                        for (int i2 = indx3; i2 <= indx7; i2++)
+                        {
+                            for (int i3 = indx4; i3 <= indx8; i3++)
+                            {
+                             if (i%2!=0 && i3%2!=0 && i2%2!=0 && i1%2!=0)
+                                {
+                                Console.Write($"{i}{i1}{i2}{i3} ");
+                                }
+                            }
+                        }
+                    }
+                }
+            
+        }
+    }
+}
